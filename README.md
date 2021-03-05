@@ -43,11 +43,13 @@ master
 ### Making mysql password file —
 
 [root@master ~]# mysql
+
 ```
 ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
 ```
 
 [root@master ~]# nano .my.cnf
+
 ```
 [client]
 user=root
