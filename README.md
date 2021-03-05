@@ -218,7 +218,7 @@ MariaDB [(none)]> start slave;
 [root@slave ~]# mysql mysql < mysql.sql
 
 
-### Switch to master server —
+### Switch to master —
 
 **Install net tools and test the master slave connectivity**
 
@@ -254,7 +254,7 @@ MariaDB [(none)]> show databases;
 
 MariaDB [(none)]> unlock table;
 
-### Find on slave —
+**Find on slave —**
 
 [root@slave ~]# mysql
 
@@ -271,7 +271,7 @@ MariaDB [(none)]> show databases;
 3 rows in set (0.008 sec)
 ```
 
-### Create database on master —
+**Create database on master —**
 
 MariaDB [(none)]> create database replication;
 
@@ -290,7 +290,7 @@ MariaDB [(none)]> show databases;
 4 rows in set (0.001 sec)
 ```
 
-### Check on slave —
+**Check on slave —**
 
 MariaDB [(none)]> show databases;
 
