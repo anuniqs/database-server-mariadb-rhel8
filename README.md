@@ -23,7 +23,7 @@ master
 [root@master ~]# setenforce 0
 
 
-### Prepare server with MariaDB —
+### Prepare master with MariaDB —
 
 [root@master ~]# sudo dnf install mariadb-server
 
@@ -118,7 +118,7 @@ slave
 [root@slave ~]# setenforce 0
 
 
-### Prepare server for MariaDB —
+### Prepare slave with MariaDB —
 
 [root@slave ~]# sudo dnf install mariadb-server
 
@@ -155,9 +155,10 @@ MariaDB [(none)]> show schemas;
 MariaDB [(none)]> show databases;
 
 
-### Prepare server for slave 
+### Slave configuration —
 
 [root@slave ~]# nano /etc/my.cnf
+
 ```
 [mysqld]
 server-id=22
@@ -165,6 +166,7 @@ server-id=22
 [root@slave ~]# sudo systemctl restart mariadb
 
 [root@slave ~]# mysql
+
 ```
 MariaDB [(none)]> change master to
     -> master_host='master',
