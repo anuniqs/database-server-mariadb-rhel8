@@ -98,6 +98,8 @@ Binlog_Ignore_DB:
 
 ### Slave, 192.168.43.168 —
 
+**DNS setup -** 
+
 [root@slave ~]# nano /etc/hostname
 
 ```
