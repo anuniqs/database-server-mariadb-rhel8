@@ -1,7 +1,9 @@
-## Set up Master Slave Replication in MySQL —
+## Set up Master Slave Replication in MySQL / MariaDB —
 
 
 ### Master, 192.168.43.135 —
+
+**DNS setup -** 
 
 [root@master ~]# nano /etc/hostname
 ```
@@ -62,7 +64,7 @@ MariaDB [(none)]> show schemas;
 MariaDB [(none)]> show databases;
 
 
-### Master confiduration —
+### Master configuration —
 
 [root@master ~]# nano /etc/my.cnf
 
